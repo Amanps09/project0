@@ -36,6 +36,7 @@
     </form>
   </div>
 </nav>
+<div id="typewriter"></div>
 <div id="demo" class="carousel slide" data-ride="carousel">
   <ul class="carousel-indicators">
     <li data-target="#demo" data-slide-to="0" class="active"></li>
@@ -215,5 +216,24 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+    a="hello from shashank"
+    function typewriter(){
+      if(i<a.length){
+        document.getElementById('typewriter').innerHTML+=a[i];
+        i++;
+        setTimeout(() => {
+         typewriter(); 
+        }, 100);
+      }
+      else{
+        i=0;
+        setTimeout(() => {
+          typewriter();
+        }, 100);
+      }
+    }
+    
+    </script>
   </body>
 </html>
